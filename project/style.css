@@ -1,0 +1,105 @@
+* {
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+input {
+    color: #000;
+}
+
+html {
+    background-color: #000;
+}
+
+#all {
+    background-color: rgb(10,10,10);
+    padding: 20px;
+    border-radius: 20px;
+    width: 500px;
+    margin: 100px auto 0;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+select {
+    color: #000;
+}
+select option {
+    color: #000;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(70,70,70,0.5); 
+    border-radius: 10px;
+  }
+
+#chatLogs {
+    background-image: url(chatbackground.png);
+    
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    height: 390px;
+    padding-bottom: 10px;
+    width: 500px;
+    border-radius: 10px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.newLogDiv {
+    margin: 10px 0 0 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: fit-content;
+    background-color: rgb(35,35,35);
+
+    opacity: 0;
+    transform: translateX(-100px);
+
+    animation-name: popin;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes popin {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.newLogDiv:hover .tijd {
+    color: #aaa;
+}
+
+.naam {
+    font-size: 18px;
+    margin: 0;
+    margin-left: 2px;
+    display: inline-block;
+}
+
+.tijd {
+    margin: 0;
+    margin-left: 10px;
+    margin-top: 4px;
+    font-size: 12px;
+    display: inline-block;
+    float: right;
+    color: rgb(35,35,35);
+}
+
+.bericht {
+    font-size: 14px;
+    width: fit-content;
+    max-width: 445px;
+    margin: 5px 2px;
+    overflow-wrap: anywhere;
+}
